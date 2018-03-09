@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <title>Mariachi Trompeta Celestial</title>
 
@@ -49,10 +51,31 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contáctame</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h1>Login to Your Account</h1><br>
+          <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
+          
+          <div class="login-help">
+          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+      </div>
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
@@ -73,7 +96,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">¡Sobre mí!</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+            <p class="text-faded mb-4">Músico, trompetista profesional, con experiencia en mas 15 años tanto como solista, como en mariachis reconocidos del país.</p>
           </div>
         </div>
       </div>
@@ -211,15 +234,20 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>(+57)3004770476</p>
+          <div class="col-lg-2 ml-auto text-center">
+            <a href="tel:+573004770476" class="fa fa-phone fa-3x mb-3 sr-contact"></a>
           </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">hamn_82@hotmail.com</a>
-            </p>
+          <div class="col-lg-2 ml-auto text-center">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=34625428115&text=Hola,%20necesito%20contratarte!" class="fa fa-whatsapp fa-3x mb-3 sr-contact"></a>
+          </div>
+          <div class="col-lg-2 ml-auto text-center">
+            <a class="fa fa-facebook fa-3x mb-3 sr-contact" target="_blank" href="https://www.facebook.com/"></a>
+          </div>
+          <div class="col-lg-2 ml-auto text-center">
+            <a class="fa fa-instagram fa-3x mb-3 sr-contact" target="_blank" href="https://www.instagram.com/"></a>
+          </div>
+          <div class="col-lg-2 mr-auto text-center">
+              <a class="fa fa-envelope-o fa-3x mb-3 sr-contact" href="mailto:hamn_82@hotmail.com"></a>
           </div>
         </div>
       </div>
