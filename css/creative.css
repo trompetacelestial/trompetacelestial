@@ -39,6 +39,10 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+#sesion {
+  color: red;
+}
+
 .bg-primary {
   background-color: #e4bf4f !important;
 }
