@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="js/ajax.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
@@ -52,38 +53,40 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Contáctame</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+              <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#login-modal">Ingresar</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-        <div class="loginmodal-container">
-          <h1>Login to Your Account</h1><br>
-          <form>
-          <input type="text" name="user" placeholder="Username">
-          <input type="password" name="pass" placeholder="Password">
-          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-          </form>
-          
-          <div class="login-help">
-          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+    <div class="modal fade" tabindex="-1" role="dialog" id="login-modal" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content loginmodal-container">
+          <div class="modal-header">
+            <h5 class="modal-title">Ingrese su usuario </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form  action="php/objlogin.php" method="POST">
+            <input type="text" id="user" name="usuario" placeholder="Usuario" required="">
+            <input type="password" id="pass" name="clave" placeholder="Contraseña" required="">
+          </div>
+            <input type="submit" name="saveObjLogin" class="login loginmodal-submit" value="Ingresar">
+            </form>
           </div>
         </div>
       </div>
-      </div>
+    </div>
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-
             <a class="btn btn-circle js-scroll-trigger" href="#about">
-              <i class="fa fa-angle-double-down animated"></i>
+              <i class="fa fa-angle-double-down animated" onmouseover="this.style.cssText='color: #e4bf4f'" onmouseout="this.style.cssText='color: #ffff'"></i>
             </a>
           </div>
         </div>
@@ -116,28 +119,28 @@
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
+              <h3 class="mb-3">Mis servicios</h3>
               <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
+              <h3 class="mb-3">Mis servicios</h3>
               <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
+              <h3 class="mb-3">Mis servicios</h3>
               <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
+              <h3 class="mb-3">Mis servicios</h3>
               <p class="text-muted mb-0">You have to make your websites with love these days!</p>
             </div>
           </div>
@@ -235,19 +238,21 @@
         </div>
         <div class="row">
           <div class="col-lg-2 ml-auto text-center">
-            <a href="tel:+573004770476" class="fa fa-phone fa-3x mb-3 sr-contact"></a>
+            <a href="tel:+573004770476" class="fa fa-phone fa-3x mb-3 sr-contact" onmouseover="this.style.cssText='color: #e4bf4f'" onmouseout="this.style.cssText='color: black'"></a><br>
+            <h4 class="hamn" id="num">+57300477046</h4>
           </div>
           <div class="col-lg-2 ml-auto text-center">
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=573004770476&text=Hola,%20necesito%20contratarte!" class="fa fa-whatsapp fa-3x mb-3 sr-contact"></a>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=573004770476&text=Hola,%20necesito%20contratarte!" class="fa fa-whatsapp fa-3x mb-3 sr-contact" onmouseover="this.style.cssText='color: #e4bf4f'" onmouseout="this.style.cssText='color: black'"></a>
           </div>
           <div class="col-lg-2 ml-auto text-center">
-            <a class="fa fa-facebook fa-3x mb-3 sr-contact" target="_blank" href="https://www.facebook.com/"></a>
+            <a class="fa fa-facebook fa-3x mb-3 sr-contact" target="_blank" href="https://www.facebook.com/" onmouseover="this.style.cssText='color: #e4bf4f'" onmouseout="this.style.cssText='color: black'"></a>
           </div>
           <div class="col-lg-2 ml-auto text-center">
-            <a class="fa fa-instagram fa-3x mb-3 sr-contact" target="_blank" href="https://www.instagram.com/"></a>
+            <a class="fa fa-instagram fa-3x mb-3 sr-contact" target="_blank" href="https://www.instagram.com/" onmouseover="this.style.cssText='color: #e4bf4f'" onmouseout="this.style.cssText='color: black'"></a>
           </div>
           <div class="col-lg-2 mr-auto text-center">
-              <a class="fa fa-envelope-o fa-3x mb-3 sr-contact" href="mailto:hamn_82@hotmail.com"></a>
+              <a class="fa fa-envelope-o fa-3x mb-3 sr-contact" href="mailto:hamn_82@hotmail.com" onmouseover="this.style.cssText='color: #e4bf4f'" onmouseout="this.style.cssText='color: black'"></a><br>
+              <h4 class="hamn" style="margin-left: -42px;" >hamn_82@hotmail.com</h4>
           </div>
         </div>
       </div>
